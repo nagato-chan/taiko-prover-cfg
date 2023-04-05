@@ -20,6 +20,7 @@ if [ "$ENABLE_PROVER" == "true" ]; then
         --zkevmRpcdEndpoint http://zkevm-chain-prover-rpcd:${PORT_ZKEVM_CHAIN_PROVER_RPCD} \
         --zkevmRpcdParamsPath /data \
         --l1.proverPrivKey ${L1_PROVER_PRIVATE_KEY} \
+		--proofNumberRate 8
         --maxConcurrentProvingJobs 1
 else
     sleep infinity
