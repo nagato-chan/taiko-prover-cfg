@@ -140,8 +140,6 @@ services:
         - 9091
     ports:
         - "9091:9091"
-    networks:
-        - metrics
     <<: *logging
 
   grafana:
