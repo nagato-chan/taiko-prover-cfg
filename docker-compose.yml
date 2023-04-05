@@ -82,7 +82,7 @@ services:
     <<: *logging
 
   taiko_client_prover_relayer:
-    image: ghcr.io/nagato-chan/taiko-client
+    image: ghcr.io/nagato-chan/taiko-client:sha-b56b653
     restart: unless-stopped
     pull_policy: always
     depends_on:
