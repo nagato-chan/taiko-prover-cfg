@@ -3,7 +3,7 @@ datasources:
   - name: Prometheus
     type: prometheus
     uid: P623EFAF6A3784606
-    org_id: 2
+    org_id: 1
     editable: true
     is_default: true
     access: proxy
