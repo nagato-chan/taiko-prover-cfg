@@ -1,11 +1,35 @@
 apiVersion: 1
 providers:
-  - name: "L2 Execution Engine"
-    folder: ""
+  - name: 'L2 Execution Engine'
+    folder: ''
     type: file
     disableDeletion: true
     updateIntervalSeconds: 10
     allowUiUpdates: false
     options:
       path: /etc/grafana/custom/provisioning/dashboards/l2-execution-engine-overview-dashboard.json
+      foldersFromFilesStructure: true
+
+  - name: 'Nethermind L1 Engine'
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /etc/grafana/custom/provisioning/dashboards/nethermind.json
+      foldersFromFilesStructure: true
+
+  - name: 'Node Export'
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /etc/grafana/custom/provisioning/dashboards/node-export.json
+      foldersFromFilesStructure: true
+
+  - name: Teku Consensus
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /etc/grafana/custom/provisioning/dashboards/teku.json
       foldersFromFilesStructure: true

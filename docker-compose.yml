@@ -132,6 +132,18 @@ services:
       - --config.file=/etc/prometheus/prometheus.yml
     <<: *logging
 
+  pushgateway:
+    image: prom/pushgateway
+    container_name: pushgateway
+    restart: unless-stopped
+    expose:
+        - 9091
+    ports:
+        - "9091:9091"
+    networks:
+        - metrics
+    <<: *logging
+    
   grafana:
     image: grafana/grafana:latest
     restart: unless-stopped

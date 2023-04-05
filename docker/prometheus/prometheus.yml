@@ -17,3 +17,8 @@ scrape_configs:
     static_configs:
       - targets:
           - l2_execution_engine:6060
+
+  - job_name: 'Nethermind'
+    honor_labels: true
+    static_configs:
+    - targets: ['pushgateway:9091']
