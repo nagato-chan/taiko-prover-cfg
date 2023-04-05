@@ -1,9 +1,18 @@
 apiVersion: 1
 datasources:
-  - name: Prometheus
+  - name: L2ExecutionEngine
     type: prometheus
     uid: P623EFAF6A3784606
     org_id: 1
+    editable: true
+    is_default: true
+    access: proxy
+    url: http://prometheus:9090
+    
+  - name: NethermindL1Engine
+    type: prometheus
+    # uid: P623EFAF6A3784606
+    org_id: 2
     editable: true
     is_default: true
     access: proxy
