@@ -21,4 +21,11 @@ scrape_configs:
   - job_name: 'Nethermind'
     honor_labels: true
     static_configs:
-    - targets: ['pushgateway:9091']
+    - targets: ['sedge-execution-client:8008']
+  
+  - job_name: "teku-dev"
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["sedge-consensus-client:8008"]
